@@ -1,1 +1,1 @@
-{"ProjectBreakpoints":"{\"Value\":{}}","OpenedDocuments":"[\"Process.xaml\",\"Odoo/CreateAsientoContable.xaml\",\"Framework/InitAllApplications.xaml\",\"Main.xaml\",\"Odoo/Login.xaml\"]","ProjectWatches":"{\"Value\":[]}"}
+{"ProjectBreakpoints":"{\"Value\":{\"Data_Extraction/SendEmailToPO.xaml\":[{\"ConditionalExpression\":null,\"ActionExpression\":null,\"ExpectedHitCounter\":null,\"ShouldContinueAfterAction\":false,\"IsEnabled\":true,\"ActivityId\":\"1.11\",\"ActivityName\":\"Send SMTP Mail Message\"}]}}","OpenedDocuments":"[\"Main.xaml\"]","ProjectWatches":"{\"Value\":[]}"}

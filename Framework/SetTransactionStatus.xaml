@@ -100,7 +100,7 @@
               <av:Size x:Key="ShapeSize">200,138</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="This Transition is picked up if we have no exception, of any type.&#xA;" DisplayName="Success" sap:VirtualizedContainerService.HintSize="563,1067" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence sap2010:Annotation.AnnotationText="This Transition is picked up if we have no exception, of any type.&#xA;" DisplayName="Success" sap:VirtualizedContainerService.HintSize="598,1131" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -108,14 +108,14 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AddLogFields DisplayName="Add Transaction log fields" sap:VirtualizedContainerService.HintSize="521,22" sap2010:WorkflowViewState.IdRef="AddLogFields_3">
+            <ui:AddLogFields DisplayName="Add Transaction log fields" sap:VirtualizedContainerService.HintSize="556,22" sap2010:WorkflowViewState.IdRef="AddLogFields_3">
               <ui:AddLogFields.Fields>
                 <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">Success</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionNumber">[io_TransactionNumber.ToString]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionID">[in_TransactionID]</InArgument>
               </ui:AddLogFields.Fields>
             </ui:AddLogFields>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_Config(&quot;LogMessage_Success&quot;).ToString]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="556,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[in_Config(&quot;LogMessage_Success&quot;).ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -123,7 +123,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:RemoveLogFields DisplayName="Remove Transaction log fields" sap:VirtualizedContainerService.HintSize="521,22" sap2010:WorkflowViewState.IdRef="RemoveLogFields_3">
+            <ui:RemoveLogFields DisplayName="Remove Transaction log fields" sap:VirtualizedContainerService.HintSize="556,22" sap2010:WorkflowViewState.IdRef="RemoveLogFields_3">
               <ui:RemoveLogFields.Fields>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="8">
                   <InArgument x:TypeArguments="x:String">logF_TransactionStatus</InArgument>
@@ -134,7 +134,7 @@
                 </scg:List>
               </ui:RemoveLogFields.Fields>
             </ui:RemoveLogFields>
-            <If Condition="[in_TransactionItem(&quot;status&quot;).ToString.Equals(&quot;0&quot;) Or in_TransactionItem(&quot;status&quot;).ToString.Equals(&quot;error&quot;)]" DisplayName="If Restart Retry Number" sap:VirtualizedContainerService.HintSize="521,618" sap2010:WorkflowViewState.IdRef="If_6">
+            <If Condition="[in_TransactionItem(&quot;status&quot;).ToString.Equals(&quot;0&quot;) Or in_TransactionItem(&quot;status&quot;).ToString.Equals(&quot;error&quot;)]" DisplayName="If Restart Retry Number" sap:VirtualizedContainerService.HintSize="556,682" sap2010:WorkflowViewState.IdRef="If_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +142,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,470" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,534" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ui:DatabaseConnection" Name="LcDatabaseConnection" />
                   </Sequence.Variables>
@@ -160,10 +160,10 @@
                       <InArgument x:TypeArguments="x:Object">["procesado"]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:WriteRange AddHeaders="True" DataTable="[in_Dt2Write]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Nomina" StartingCell="A1" WorkbookPath="[in_Config(&quot;Ruta_Archivo_Recuperacion&quot;).ToString]">
+                  <ui:WriteRange AddHeaders="True" DataTable="[in_Dt2Write]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Facturas" StartingCell="A1" WorkbookPath="[in_Config(&quot;Ruta_Archivo_Recuperacion&quot;).ToString]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -190,7 +190,7 @@
                 </Sequence>
               </If.Then>
             </If>
-            <Assign sap:VirtualizedContainerService.HintSize="521,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign sap:VirtualizedContainerService.HintSize="556,60" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
               </Assign.To>

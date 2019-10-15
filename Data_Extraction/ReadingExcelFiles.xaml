@@ -9,7 +9,7 @@
   <this:ReadingExcelFiles.InStrNombreArchivoRecuperacion>
     <InArgument x:TypeArguments="x:String" />
   </this:ReadingExcelFiles.InStrNombreArchivoRecuperacion>
-  <sap:VirtualizedContainerService.HintSize>1522,5629</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1346,4176</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -52,7 +52,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg1:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Archivo de Nomina o Archivo de Recuperacion" sap:VirtualizedContainerService.HintSize="1502,5569" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence DisplayName="Archivo de Nomina o Archivo de Recuperacion" sap:VirtualizedContainerService.HintSize="1326,4116" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="LcDtTransactionData" />
       <Variable x:TypeArguments="x:String" Name="LcStrFilename" />
@@ -64,14 +64,14 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Reading Excel Nomina Files" sap:VirtualizedContainerService.HintSize="1460,5335" sap2010:WorkflowViewState.IdRef="Sequence_29">
+    <Sequence DisplayName="Reading Excel Nomina Files" sap:VirtualizedContainerService.HintSize="1284,3882" sap2010:WorkflowViewState.IdRef="Sequence_29">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1418,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Init - Reading Nomina Excel Files...&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1242,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Init - Reading Nomina Excel Files...&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -79,7 +79,7 @@
           </scg1:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <If sap2010:Annotation.AnnotationText="Verifies if the Recovery File (Archivo de Recuperacion) exists and read it to avoid re-processing the suministred files. If the file does not exist, then create the Recovery File based on all files. " Condition="[IO.File.Exists(InStrNombreArchivoRecuperacion)]" DisplayName="If - Lectura de nomina o archivo de recuperacion" sap:VirtualizedContainerService.HintSize="1418,5112" sap2010:WorkflowViewState.IdRef="If_5">
+      <If sap2010:Annotation.AnnotationText="Verifies if the Recovery File (Archivo de Recuperacion) exists and read it to avoid re-processing the suministred files. If the file does not exist, then create the Recovery File based on all files. " Condition="[IO.File.Exists(InStrNombreArchivoRecuperacion)]" DisplayName="If - Lectura de nomina o archivo de recuperacion" sap:VirtualizedContainerService.HintSize="1242,3659" sap2010:WorkflowViewState.IdRef="If_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -88,11 +88,11 @@
           </scg1:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Reading Archivo de Recuperacion" sap:VirtualizedContainerService.HintSize="376,481" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <Sequence DisplayName="Reading Archivo de Recuperacion" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg1:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Init - Reading Archivo Recuperacion...&quot;]">
@@ -134,7 +134,7 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Reading PayRoll Excel" sap:VirtualizedContainerService.HintSize="997,4937" sap2010:WorkflowViewState.IdRef="Sequence_42">
+          <Sequence DisplayName="Reading PayRoll Excel" sap:VirtualizedContainerService.HintSize="997,3484" sap2010:WorkflowViewState.IdRef="Sequence_42">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="LcIntCounter" />
               <Variable x:TypeArguments="x:String" Name="DeleteThis" />
@@ -152,7 +152,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="913,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Init - Processing Nomina Excel Files...&quot;]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="913,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Init - Processing facturas Excel Files...&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -210,7 +210,7 @@
                           </scg1:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <TryCatch.Try>
-                          <If sap2010:Annotation.AnnotationText="This helps to build the OuDtTransactionData with all its columns from the Original file. (&quot;Nomina Sheet&quot; or &quot;Sheet 1&quot; from Archivo de Recuperacion)" Condition="[LcStrPathFilename = LcArrFilenames(0)]" sap:VirtualizedContainerService.HintSize="797,431" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If sap2010:Annotation.AnnotationText="This helps to build the OuDtTransactionData with all its columns from the Original file. (&quot;facturas Sheet&quot; or &quot;Sheet 1&quot; from Archivo de Recuperacion)" Condition="[LcStrPathFilename = LcArrFilenames(0)]" sap:VirtualizedContainerService.HintSize="797,431" sap2010:WorkflowViewState.IdRef="If_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -222,7 +222,7 @@
                               <Sequence DisplayName="Sequence Create DT OuTransactionData" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg1:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -320,7 +320,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEach>
             </Sequence>
-            <Sequence DisplayName="Filter Data Table Nomina" sap:VirtualizedContainerService.HintSize="955,2521" sap2010:WorkflowViewState.IdRef="Sequence_60">
+            <Sequence DisplayName="Filter Data Table Nomina" sap:VirtualizedContainerService.HintSize="955,1068" sap2010:WorkflowViewState.IdRef="Sequence_60">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataRow" Name="LcDrAcccounts" />
                 <Variable x:TypeArguments="sd:DataRow[]" Name="LcDtFIles" />
@@ -331,7 +331,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="604,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Init -Filter Data Table...&quot;]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Init -Filter Data Table...&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -339,7 +339,7 @@
                   </scg1:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <ui:BuildDataTable sap2010:Annotation.AnnotationText="Builds The Table Accounts which is saved as &quot;Cuentas&quot; or &quot;Sheet 2&quot; at &quot;Archivo de Recuperacion&quot;" DataTable="[OuDtAccounts]" DisplayName="Build Data Table Accounts" sap:VirtualizedContainerService.HintSize="604,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;nombre_x0020_cuenta&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;numero_x0020_cuenta&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;debe-haber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+              <ui:BuildDataTable sap2010:Annotation.AnnotationText="Builds The Table Accounts which is saved as &quot;Cuentas&quot; or &quot;Sheet 2&quot; at &quot;Archivo de Recuperacion&quot;" DataTable="[OuDtAccounts]" DisplayName="Build Data Table Accounts" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;nombre_x0020_cuenta&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;numero_x0020_cuenta&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;debe-haber&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -348,7 +348,7 @@
                   </scg1:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:BuildDataTable>
-              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="604,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                 <Assign.To>
                   <OutArgument x:TypeArguments="sd:DataRow">[LcDrAcccounts]</OutArgument>
                 </Assign.To>
@@ -356,7 +356,7 @@
                   <InArgument x:TypeArguments="sd:DataRow">[OuDtTransactionData(0)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Identifies the columns to be proccessed and the Accounts based on the second row from the Original File." DisplayName="For Each Column Nomina" sap:VirtualizedContainerService.HintSize="604,1576" sap2010:WorkflowViewState.IdRef="ForEach`1_19" Values="[LcDrAcccounts.ItemArray]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Identifies the columns to be proccessed and the Accounts based on the second row from the Original File." DisplayName="For Each Column facturas" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="ForEach`1_19" Values="[LcDrAcccounts.ItemArray]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
@@ -471,14 +471,14 @@
                 </ui:ForEach.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg1:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEach>
-              <ui:RemoveDataRow Row="{x:Null}" DataTable="[OuDtTransactionData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="604,22" sap2010:WorkflowViewState.IdRef="RemoveDataRow_9" RowIndex="1" />
-              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filters The Employees and Files to process based on the ID column." DataTable="[OuDtTransactionData]" DisplayName="Filter Data Table " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="604,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[OuDtTransactionData]" SelectColumnsMode="Keep">
+              <ui:RemoveDataRow Row="{x:Null}" DataTable="[OuDtTransactionData]" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RemoveDataRow_9" RowIndex="1" />
+              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filters The Employees and Files to process based on the ID column." DataTable="[OuDtTransactionData]" DisplayName="Filter Data Table " FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="FilterDataTable_10" OutputDataTable="[OuDtTransactionData]" SelectColumnsMode="Keep">
                 <ui:FilterDataTable.Filters>
                   <scg1:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                     <ui:FilterOperationArgument BooleanOperator="And" Operator="GT">
@@ -512,7 +512,7 @@
                   </scg1:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:FilterDataTable>
-              <Sequence DisplayName="Add Data Columns" sap:VirtualizedContainerService.HintSize="604,238" sap2010:WorkflowViewState.IdRef="Sequence_75">
+              <Sequence DisplayName="Add Data Columns" sap:VirtualizedContainerService.HintSize="334,238" sap2010:WorkflowViewState.IdRef="Sequence_75">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -561,7 +561,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Assign sap2010:Annotation.AnnotationText="The Number of columns to be proccessed." sap:VirtualizedContainerService.HintSize="1460,102" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="The Number of columns to be proccessed." sap:VirtualizedContainerService.HintSize="1284,102" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[OuIntTransactionNumber]</OutArgument>
       </Assign.To>

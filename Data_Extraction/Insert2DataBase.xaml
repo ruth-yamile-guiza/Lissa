@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>262,203</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>538,661</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -21,78 +21,61 @@
       <AssemblyReference>System.Data</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_21">
+  <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="518,601" sap2010:WorkflowViewState.IdRef="Sequence_21">
     <sap:WorkflowViewStateService.ViewState>
       <scg1:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="518,601" sap2010:WorkflowViewState.IdRef="Sequence_20">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg1:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="476,509" sap2010:WorkflowViewState.IdRef="Sequence_19">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="ui:DatabaseConnection" Name="LcDatabaseConnection" />
-            </Sequence.Variables>
+    <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="476,509" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:DatabaseConnection" Name="LcDatabaseConnection" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:DatabaseTransaction ContinueOnError="{x:Null}" DatabaseConnection="[LcDatabaseConnection]" DisplayName="BaseDatos" sap:VirtualizedContainerService.HintSize="434,417" sap2010:WorkflowViewState.IdRef="DatabaseTransaction_2" ProviderName="System.Data.Odbc" UseTransaction="True" ConnectionString="Dsn=local;uid=root;pwd=basededatos">
+        <ui:DatabaseTransaction.Body>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg1:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:DatabaseTransaction ContinueOnError="{x:Null}" DatabaseConnection="[LcDatabaseConnection]" DisplayName="BaseDatos" sap:VirtualizedContainerService.HintSize="434,417" sap2010:WorkflowViewState.IdRef="DatabaseTransaction_2" ProviderName="System.Data.Odbc" UseTransaction="True" ConnectionString="Dsn=local;uid=root;pwd=basededatos">
-              <ui:DatabaseTransaction.Body>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg1:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Use DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="USE 2nv_bots">
-                    <ui:ExecuteQuery.Parameters>
-                      <scg1:Dictionary x:TypeArguments="x:String, Argument" />
-                    </ui:ExecuteQuery.Parameters>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg1:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ExecuteQuery>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Insert to DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;INSERT INTO t_log_playroll (NombreEmpleado, LogEstado) VALUES (' &quot;&amp; in_TransactionItem(&quot;empresa&quot;).ToString &amp;&quot; ',' &quot;&amp; in_TransactionItem(&quot;status&quot;).ToString &amp;&quot; ');&quot;]">
-                    <ui:ExecuteQuery.Parameters>
-                      <scg1:Dictionary x:TypeArguments="x:String, Argument" />
-                    </ui:ExecuteQuery.Parameters>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg1:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:ExecuteQuery>
-                </Sequence>
-              </ui:DatabaseTransaction.Body>
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Use DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="USE 2nv_bots">
+              <ui:ExecuteQuery.Parameters>
+                <scg1:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:DatabaseTransaction>
+            </ui:ExecuteQuery>
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Insert to DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;INSERT INTO t_log_playroll (NombreEmpleado, LogEstado) VALUES (' &quot;&amp; in_TransactionItem(&quot;empresa&quot;).ToString &amp;&quot; ',' &quot;&amp; in_TransactionItem(&quot;status&quot;).ToString &amp;&quot; ');&quot;]">
+              <ui:ExecuteQuery.Parameters>
+                <scg1:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg1:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExecuteQuery>
           </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg1:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
+        </ui:DatabaseTransaction.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg1:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:DatabaseTransaction>
+    </Sequence>
   </Sequence>
 </Activity>

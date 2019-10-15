@@ -219,7 +219,7 @@
                         <OutArgument x:TypeArguments="x:String">[IoNombreAsientoContable]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[in_TransactionItem("odoo").ToString.Remove(0,3).Replace(".xlsx", "")]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[in_TransactionItem("odoo").ToString.Remove(0,4).Replace(".xlsx", "")]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
@@ -261,7 +261,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">432,445 432,475 430,475 430,497</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Creates the &quot;Asiento Contable&quot;. It the bot fails, then the &quot;Asiento Contable&quot; will not be created. " DisplayName="Crear Asiento Contable" sap:VirtualizedContainerService.HintSize="380,736" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                <Sequence sap2010:Annotation.AnnotationText="Creates the &quot;Asiento Contable&quot;. It the bot fails, then the &quot;Asiento Contable&quot; will not be created. " DisplayName="Crear Asiento Contable" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_55">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="s:String[]" Name="LcStrFecha_1" />
                     <Variable x:TypeArguments="x:String" Name="LcStrFech" />
@@ -541,7 +541,7 @@
                               <OutArgument x:TypeArguments="x:Double">[LcDouMoney]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:Double">[Math.Round(Convert.ToDouble(in_TransactionItem(LcIntCounter+4)), 2)]</InArgument>
+                              <InArgument x:TypeArguments="x:Double">[Math.Round(Convert.ToDouble(in_TransactionItem(LcIntCounter+4)),2)]</InArgument>
                             </Assign.Value>
                           </Assign>
                           <If Condition="[&quot;D&quot;.Equals(InDtAccounts(LcIntCounter)(&quot;debe-haber&quot;))]" DisplayName="If - ¿La columna va al debe o al haber?" sap:VirtualizedContainerService.HintSize="721,277" sap2010:WorkflowViewState.IdRef="If_8">
@@ -720,7 +720,7 @@
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="663,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Process - Guardar Asiento Contable...&quot;]">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="797,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Process - Guardar Asiento Contable...&quot;]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -728,8 +728,8 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
-                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="663,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                          <If sap2010:Annotation.AnnotationText="&quot;Debe&quot; and &quot;Haber&quot; must have the same value, in other case it will be an error at odoo platform. When the bot is creating an &quot;Asiento Contable&quot; then &quot;Debe&quot; and &quot;Haber&quot; are zero." Condition="[Math.Round(Convert.ToDouble(in_TransactionItem(&quot;debe&quot;)), 2) = Math.Round(Convert.ToDouble(in_TransactionItem(&quot;haber&quot;)), 2)]" DisplayName="(If) Guardar Asiento Contable" sap:VirtualizedContainerService.HintSize="663,558" sap2010:WorkflowViewState.IdRef="If_17">
+                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          <If sap2010:Annotation.AnnotationText="&quot;Debe&quot; and &quot;Haber&quot; must have the same value, in other case it will be an error at odoo platform. When the bot is creating an &quot;Asiento Contable&quot; then &quot;Debe&quot; and &quot;Haber&quot; are zero." Condition="[Math.Round(Convert.ToDouble(in_TransactionItem(&quot;debe&quot;)), 2) = Math.Round(Convert.ToDouble(in_TransactionItem(&quot;haber&quot;)), 2)]" DisplayName="(If) Guardar Asiento Contable" sap:VirtualizedContainerService.HintSize="797,558" sap2010:WorkflowViewState.IdRef="If_17">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -738,31 +738,31 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Guardar Asiento Contable" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                              <Sequence DisplayName="Guardar Asiento Contable" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_75">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarAsientoContable Workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="Odoo\GuardarAsientoContable.xaml">
+                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarAsientoContable Workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_50" UnSafe="False" WorkflowFileName="Odoo\GuardarAsientoContable.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PanelDeControlContable workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="Odoo\PanelDeControlContable.xaml">
+                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PanelDeControlContable workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_55" UnSafe="False" WorkflowFileName="Odoo\PanelDeControlContable.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>

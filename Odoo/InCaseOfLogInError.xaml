@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="InConfig" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>721,1629</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,2094</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -14,7 +14,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="10">
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -27,7 +27,7 @@
       <AssemblyReference>System.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="In case of Error" sap:VirtualizedContainerService.HintSize="701,1529" sap2010:WorkflowViewState.IdRef="Sequence_12">
+  <Sequence DisplayName="In case of Error" sap:VirtualizedContainerService.HintSize="916,2034" sap2010:WorkflowViewState.IdRef="Sequence_12">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LcBooLoginError" />
     </Sequence.Variables>
@@ -37,7 +37,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="659,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Init - In Case Of Error...&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="874,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Init - In Case Of Error...&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -45,19 +45,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Log-In Odoo'" sap:VirtualizedContainerService.HintSize="659,1306" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="f85bf94c93bcdecb139796078eca4313" Selector="&lt;html title='*Odoo' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Log-In Odoo'" sap:VirtualizedContainerService.HintSize="874,1811" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="f85bf94c93bcdecb139796078eca4313" Selector="&lt;html title='*Odoo' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="625,1160" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="840,1665" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="LcBooLoginError1" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:UiElementExists sap2010:Annotation.AnnotationText="If message error appears." DisplayName="Element Exists 'Error LogIn'" Exists="[LcBooLoginError]" sap:VirtualizedContainerService.HintSize="583,133" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists sap2010:Annotation.AnnotationText="If message error appears." DisplayName="Element Exists 'Error LogIn'" Exists="[LcBooLoginError]" sap:VirtualizedContainerService.HintSize="798,133" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="89ed91dba32635237a01c1982fb19219" Selector="&lt;webctrl tag='P' aaname='Wrong login/password ' class='alert alert-danger' innertext='Wrong login/password ' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
@@ -69,97 +72,137 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[LcBooLoginError]" DisplayName="If LogIn Error" sap:VirtualizedContainerService.HintSize="583,895" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:UiElementExists sap2010:Annotation.AnnotationText="If message error appears." DisplayName="Element Exists 'Error LogIn'" Exists="[LcBooLoginError1]" sap:VirtualizedContainerService.HintSize="798,133" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="120851bd1bd1a869a67ebbe6f0298f0f" Selector="&lt;webctrl tag='P' class='alert alert-danger' innertext='Login / clave incorrecta. ' parentclass='oe_login_form' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+              </ui:UiElementExists.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+            </ui:UiElementExists>
+            <If Condition="[LcBooLoginError.Equals(true) Or LcBooLoginError1.Equals(true)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="798,1227" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <TryCatch sap2010:Annotation.AnnotationText="First: Delete Odoo credentials because they are wrong.&#xA;&#xA;Second: Tries to send an email. If it fails, then it deletes the credential because their are wrong." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,748" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                <If Condition="[LcBooLoginError Or LcBooLoginError1]" DisplayName="If LogIn Error" sap:VirtualizedContainerService.HintSize="618,1080" sap2010:WorkflowViewState.IdRef="If_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch.Try>
-                    <Sequence DisplayName="Send an Email to PO " sap:VirtualizedContainerService.HintSize="242,449" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="ui:Image" Name="LcImaErrorLogin" />
-                        <Variable x:TypeArguments="x:String" Name="LcStrBotUsername" />
-                        <Variable x:TypeArguments="ss:SecureString" Name="LcSecBotPassword" />
-                      </Sequence.Variables>
+                  <If.Then>
+                    <TryCatch sap2010:Annotation.AnnotationText="First: Delete Odoo credentials because they are wrong.&#xA;&#xA;Second: Tries to send an email. If it fails, then it deletes the credential because their are wrong." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,933" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:DeleteCredential DisplayName="Delete Odoo credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_7" Target="[InConfig(&quot;Credenciales_Odoo&quot;).ToString]" />
-                      <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get Email secure credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[LcSecBotPassword]" PersistanceType="Enterprise" Target="[InConfig(&quot;Credenciales_Correo_Bot&quot;).ToString]" Username="[LcStrBotUsername]" />
-                      <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3" Screenshot="[LcImaErrorLogin]">
-                        <ui:TakeScreenshot.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="16d0dc729ce1d1da73e7d05fd113a087" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' tag='DIV' aaname='        Correo electrónico   Contraseña   Login / clave incorrecta.      Iniciar Sesión     Respaldado por Odoo ' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:TakeScreenshot.Target>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:TakeScreenshot>
-                      <ui:SaveImage DisplayName="Save Image" FileName="Exceptions_Screenshots\LoginError.png" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[LcImaErrorLogin]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:SaveImage>
-                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[Environment.newline+&#xA;&quot; Hola &quot;+ InConfig(&quot;Nombre_PO&quot;).ToString + &quot;, &quot;+Environment.newline+Environment.newline+&#xA;&quot; Hubo un Error al procesar el Pago de Nómina en&quot;+Environment.newline+&#xA;&quot; ODOO. El usuario o contraseña de inicio de sesión&quot;+Environment.newline+&#xA;&quot; que fue proporcionada a PlayRoll es incorrecta y/o&quot;+Environment.newline+&#xA;&quot; ha cambiado y el proceso no pudo continuar.&quot;]" DisplayName="Send SMTP Mail Message" Email="[LcStrBotUsername]" EnableSSL="True" From="[LcStrBotUsername]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendMail_4" IsBodyHtml="False" Password="[New System.Net.NetworkCredential(string.Empty, LcSecBotPassword).Password]" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="[&quot;ERROR al iniciar sesión en ODOO - Pago Nomina &quot; +System.DateTime.Now.ToShortDateString]" To="[inConfig(&quot;Correo_Usuario&quot;).ToString]">
-                        <ui:SendMail.Files>
-                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                            <InArgument x:TypeArguments="x:String">Exceptions_Screenshots\LoginError.png</InArgument>
-                          </scg:List>
-                        </ui:SendMail.Files>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:SendMail>
-                    </Sequence>
-                  </TryCatch.Try>
-                  <TryCatch.Catches>
-                    <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ActivityAction x:TypeArguments="s1:Exception">
-                        <ActivityAction.Argument>
-                          <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
-                        </ActivityAction.Argument>
-                        <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <TryCatch.Try>
+                        <Sequence DisplayName="Send an Email to PO " sap:VirtualizedContainerService.HintSize="376,634" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="ui:Image" Name="LcImaErrorLogin" />
+                            <Variable x:TypeArguments="x:String" Name="LcStrBotUsername" />
+                            <Variable x:TypeArguments="ss:SecureString" Name="LcSecBotPassword" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:DeleteCredential DisplayName="Delete credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_9" Target="[InConfig(&quot;Credenciales_Correo_Bot&quot;).ToString]" />
-                          <Throw Exception="[new BusinessRuleException(&quot;Las credenciales de ODOO&lt;Credenciales_Odoo&gt; y OFFICE_365 &lt;Credenciales_Correo_Bot&gt; son incorrectas.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                          <ui:DeleteCredential DisplayName="Delete Odoo credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_14" Target="[InConfig(&quot;Credenciales_Odoo&quot;).ToString]" />
+                          <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get Email secure credential" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetSecureCredential_4" Password="[LcSecBotPassword]" PersistanceType="Enterprise" Target="[InConfig(&quot;Credenciales_Correo_Bot&quot;).ToString]" Username="[LcStrBotUsername]" />
+                          <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'DIV'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TakeScreenshot_6" Screenshot="[LcImaErrorLogin]">
+                            <ui:TakeScreenshot.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="16d0dc729ce1d1da73e7d05fd113a087" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' tag='DIV' aaname='        Correo electrónico   Contraseña   Login / clave incorrecta.      Iniciar Sesión     Respaldado por Odoo ' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:TakeScreenshot.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:TakeScreenshot>
+                          <ui:SaveImage DisplayName="Save Image" FileName="Exceptions_Screenshots\LoginError.png" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SaveImage_6" Image="[LcImaErrorLogin]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SaveImage>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[Environment.newline]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_4" IsBodyHtml="False" IsDraft="False" Subject="[&quot;Pago de Nómina procesado con éxito &quot;+System.DateTime.Now.ToShortDateString]" To="[inConfig(&quot;Correo_Usuario&quot;).ToString]">
+                                  <ui:SendOutlookMail.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                      <InArgument x:TypeArguments="x:String">Exceptions_Screenshots\LoginError.png</InArgument>
+                                    </scg:List>
+                                  </ui:SendOutlookMail.Files>
+                                </ui:SendOutlookMail>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="[Environment.newline+&#xD;&#xA;&quot; Hola &quot;+ InConfig(&quot;Nombre_PO&quot;).ToString + &quot;, &quot;+Environment.newline+Environment.newline+&#xD;&#xA;&quot; Hubo un Error al ingresar a la plataforma &quot;+Environment.newline+&#xD;&#xA;&quot; ODOO. El usuario o contraseña de inicio de sesión&quot;+Environment.newline+&#xD;&#xA;&quot; que fueron insertadas en las credenciales son incorrectas y/o&quot;+Environment.newline+&#xD;&#xA;&quot; ha cambiado y el proceso no se puede continuar.&quot;]" DisplayName="Send SMTP Mail Message" Email="[LcStrBotUsername]" EnableSSL="True" From="[LcStrBotUsername]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_7" IsBodyHtml="False" Password="[New System.Net.NetworkCredential(string.Empty, LcSecBotPassword).Password]" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="[&quot;ERROR al iniciar sesión en ODOO - Pago Nomina &quot; +System.DateTime.Now.ToShortDateString]" To="[inConfig(&quot;Correo_Usuario&quot;).ToString]">
+                            <ui:SendMail.Files>
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">Exceptions_Screenshots\LoginError.png</InArgument>
+                              </scg:List>
+                            </ui:SendMail.Files>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:SendMail>
                         </Sequence>
-                      </ActivityAction>
-                    </Catch>
-                  </TryCatch.Catches>
-                </TryCatch>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s1:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:DeleteCredential DisplayName="Delete credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="DeleteCredential_15" Target="[InConfig(&quot;Credenciales_Correo_Bot&quot;).ToString]" />
+                              <Throw Exception="[new BusinessRuleException(&quot;Las credenciales de ODOO&lt;Credenciales_Odoo&gt; y OFFICE_365 &lt;Credenciales_Correo_Bot&gt; son incorrectas.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </If.Then>
+                </If>
               </If.Then>
             </If>
           </Sequence>
