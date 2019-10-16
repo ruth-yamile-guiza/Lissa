@@ -1187,8 +1187,8 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "Play_Roll-Pago_Nomina",
-      "projectName": "Play_Roll-Pago_Nomina",
+      "projectUniqueName": "Lissa-Contabilizacion",
+      "projectName": "Lissa-Contabilizacion",
       "projectPath": "C:\\Users\\Ruth Yamile Guiza\\Documents\\UiPath\\RobotPagoDeFacturasGastosGenerales\\.local",
       "packagesPath": "C:\\Users\\Ruth Yamile Guiza\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ruth Yamile Guiza\\Documents\\UiPath\\RobotPagoDeFacturasGastosGenerales\\.local"

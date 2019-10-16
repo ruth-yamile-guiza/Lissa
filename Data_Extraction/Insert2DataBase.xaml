@@ -6,19 +6,30 @@
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
-    <scg1:List x:TypeArguments="x:String" Capacity="4">
+    <scg1:List x:TypeArguments="x:String" Capacity="8">
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>UiPath.Database</x:String>
       <x:String>System.Data</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
     </scg1:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg1:List x:TypeArguments="AssemblyReference" Capacity="4">
+    <scg1:List x:TypeArguments="AssemblyReference" Capacity="16">
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="518,601" sap2010:WorkflowViewState.IdRef="Sequence_21">
@@ -56,7 +67,7 @@
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExecuteQuery>
-            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Insert to DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;INSERT INTO t_log_playroll (NombreEmpleado, LogEstado) VALUES (' &quot;&amp; in_TransactionItem(&quot;empresa&quot;).ToString &amp;&quot; ',' &quot;&amp; in_TransactionItem(&quot;status&quot;).ToString &amp;&quot; ');&quot;]">
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Execute Query - Insert to DB" ExistingDbConnection="[LcDatabaseConnection]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="[&quot;INSERT INTO t_log_lissa(NombreProveedor, LogEstado) VALUES (' &quot;&amp; in_TransactionItem(&quot;empresa&quot;).ToString &amp;&quot; ',' &quot;&amp; in_TransactionItem(&quot;status&quot;).ToString &amp;&quot; ');&quot;]">
               <ui:ExecuteQuery.Parameters>
                 <scg1:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:ExecuteQuery.Parameters>

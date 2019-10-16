@@ -70,6 +70,7 @@
   <Sequence DisplayName="AsientosContables" sap:VirtualizedContainerService.HintSize="476,1140" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(Of String, String)  From {{&quot;Enero&quot;, &quot;01&quot;}, {&quot;Febrero&quot;, &quot;02&quot;}, {&quot;Marzo&quot;, &quot;03&quot;}, {&quot;Abril&quot;, &quot;04&quot;}, {&quot;Mayo&quot;, &quot;05&quot;}, {&quot;Junio&quot;, &quot;06&quot;}, {&quot;Julio&quot;, &quot;07&quot;}, {&quot;Agosto&quot;, &quot;08&quot;}, {&quot;Septiembre&quot;, &quot;09&quot;}, {&quot;Octubre&quot;, &quot;10&quot;}, {&quot;Noviembre&quot;, &quot;11&quot;}, {&quot;Diciembre&quot;, &quot;12&quot;}}]" Name="LcDicMonthsDictionary" />
+      <Variable x:TypeArguments="x:Boolean" Name="LcBoolError" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">

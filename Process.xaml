@@ -219,7 +219,7 @@
                         <OutArgument x:TypeArguments="x:String">[IoNombreAsientoContable]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="x:String">[in_TransactionItem("odoo").ToString.Remove(0,4).Replace(".xlsx", "")]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[in_TransactionItem("odoo").ToString.Remove(0,3).Replace(".xlsx", "")]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
@@ -258,10 +258,10 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">332,307</av:Point>
                     <av:Size x:Key="ShapeSize">200,138</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">432,445 432,475 430,475 430,497</av:PointCollection>
+                    <av:PointCollection x:Key="ConnectorLocation">432,445 432,475 430,475 430,483.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Creates the &quot;Asiento Contable&quot;. It the bot fails, then the &quot;Asiento Contable&quot; will not be created. " DisplayName="Crear Asiento Contable" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                <Sequence sap2010:Annotation.AnnotationText="Creates the &quot;Asiento Contable&quot;. It the bot fails, then the &quot;Asiento Contable&quot; will not be created. " DisplayName="Crear Asiento Contable" sap:VirtualizedContainerService.HintSize="380,736" sap2010:WorkflowViewState.IdRef="Sequence_55">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="s:String[]" Name="LcStrFecha_1" />
                     <Variable x:TypeArguments="x:String" Name="LcStrFech" />
@@ -312,7 +312,7 @@
                             <OutArgument x:TypeArguments="x:String">[LcStrReferencia]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[in_TransactionItem(2).ToString + " -- " + LcStrReferencia]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[in_TransactionItem(2).ToString + " - " + LcStrReferencia]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_52">
@@ -374,9 +374,9 @@
                   <FlowStep x:Name="__ReferenceID1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">330,497</av:Point>
+                        <av:Point x:Key="ShapeLocation">330,483.5</av:Point>
                         <av:Size x:Key="ShapeSize">200,93</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">430,590 430,601</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">430,576.5 430,601</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Registrar Proveedor" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Sequence_48">
@@ -433,7 +433,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
-                      <While DisplayName="While Accounts" sap:VirtualizedContainerService.HintSize="809,2100" sap2010:WorkflowViewState.IdRef="While_3">
+                      <While DisplayName="While Accounts" sap:VirtualizedContainerService.HintSize="809,2192" sap2010:WorkflowViewState.IdRef="While_3">
                         <While.Variables>
                           <Variable x:TypeArguments="x:Int32" Name="LcIntVelocity" />
                         </While.Variables>
@@ -444,7 +444,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <While.Condition>[LcIntCounter &lt; inDtAccounts.Rows.Count]</While.Condition>
-                        <Sequence sap:VirtualizedContainerService.HintSize="763,1942" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                        <Sequence sap:VirtualizedContainerService.HintSize="763,2034" sap2010:WorkflowViewState.IdRef="Sequence_46">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Double" Name="LcDouMoney" />
                             <Variable x:TypeArguments="x:String" Name="LcDrRecordEmployee_1" />
@@ -612,7 +612,7 @@
                               </ui:MultipleAssign>
                             </If.Else>
                           </If>
-                          <DoWhile DisplayName="Do While Account per Employee" sap:VirtualizedContainerService.HintSize="721,885" sap2010:WorkflowViewState.IdRef="DoWhile_2">
+                          <DoWhile DisplayName="Do While Account per Employee" sap:VirtualizedContainerService.HintSize="721,977" sap2010:WorkflowViewState.IdRef="DoWhile_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -620,14 +620,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <DoWhile.Condition>[LcIntTriesPerRecord &lt; 3 and LcBooFailRecord]</DoWhile.Condition>
-                            <Sequence sap:VirtualizedContainerService.HintSize="556,723" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                            <Sequence sap:VirtualizedContainerService.HintSize="598,815" sap2010:WorkflowViewState.IdRef="Sequence_78">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="514,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                              <Assign sap:VirtualizedContainerService.HintSize="556,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">[LcBooFailRecord]</OutArgument>
                                 </Assign.To>
@@ -635,36 +635,43 @@
                                   <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If Condition="[LcDrRecordEmployee(5).Equals(&quot;0&quot;) And LcDrRecordEmployee(6).Equals(&quot;0&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="514,235" sap2010:WorkflowViewState.IdRef="If_19">
+                              <If Condition="[LcDrRecordEmployee(5).Equals(&quot;0&quot;) And LcDrRecordEmployee(6).Equals(&quot;0&quot;)]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="556,454" sap2010:WorkflowViewState.IdRef="If_19">
                                 <If.Else>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AnadirRegistroAsientoContable workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_53" UnSafe="False" WorkflowFileName="Odoo\AnadirRegistroAsientoContable.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:Int32" x:Key="InIntVelocity">[LcIntVelocity]</InArgument>
-                                      <InArgument x:TypeArguments="s:String[]" x:Key="InDrRecordEmployee">[LcDrRecordEmployee]</InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="InDrRecordEmployee_1">[LcDrRecordEmployee_1]</InArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
+                                  <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                  </ui:InvokeWorkflowFile>
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AnadirRegistroAsientoContable workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_53" UnSafe="False" WorkflowFileName="Odoo\AnadirRegistroAsientoContable.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:Int32" x:Key="InIntVelocity">[LcIntVelocity]</InArgument>
+                                        <InArgument x:TypeArguments="s:String[]" x:Key="InDrRecordEmployee">[LcDrRecordEmployee]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="InDrRecordEmployee_1">[LcDrRecordEmployee_1]</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Odoo\AvoidErrorsOdoo.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <OutArgument x:TypeArguments="x:Boolean" x:Key="OuBooErrorDetected">[LcBooFailRecord]</OutArgument>
+                                        <InArgument x:TypeArguments="x:Int32" x:Key="InIntVelocity">[LcIntVelocity]</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InvokeWorkflowFile>
+                                  </Sequence>
                                 </If.Else>
                               </If>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="514,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Odoo\AvoidErrorsOdoo.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="OuBooErrorDetected">[LcBooFailRecord]</OutArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="InIntVelocity">[LcIntVelocity]</InArgument>
-                                </ui:InvokeWorkflowFile.Arguments>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:InvokeWorkflowFile>
-                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="514,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="556,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                                 <ui:MultipleAssign.AssignOperations>
                                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
